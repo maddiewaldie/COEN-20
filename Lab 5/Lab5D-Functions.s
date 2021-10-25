@@ -52,7 +52,7 @@ TireCirc:
 	ADD     R2,R2,R3    // Add together the two products (4987290 * D1 + 3927 * D20) = R2 <- R2*R3
 
 	// Prepare register with the last constant in the equation
-	LDR	R3,=1587500
+	LDR		R3,=1587500
 
 	// Compute two 32 bit values to be returned as single 64 bit integer (quotient & remainder)
 	UDIV    R1,R2,R3    // Find quotient of ((4987290 * D1 + 3927 * D2)/1587500) = R1 <- R2 ÷ R4
