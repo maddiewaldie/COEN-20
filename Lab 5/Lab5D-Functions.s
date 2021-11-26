@@ -27,7 +27,7 @@ TireDiam:
 
 	// Compute two 32 bit values to be returned as single 64 bit integer (quotient & remainder)
 	ADDS    R1,R0,R2    // Add together R and the quotient (A*W)/1270; R1 <- R0 + R2
-	MLS     R0,R4,R0,R3 // (A*W) - (A*W)/1270*1270 = R4 - (R0 * R3)
+	MLS     R0,R3,R0,R4 // (A*W) - (A*W)/1270*1270 = R4 - (R0 * R3)
 
 	POP     {R4,PC}     // Restore R4 & PC
 	BX      LR          // Return
